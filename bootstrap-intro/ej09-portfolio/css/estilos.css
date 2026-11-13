@@ -3,27 +3,15 @@
    Usa el mínimo CSS posible: primero intenta con clases de Bootstrap.
    ============================================================ */
 
-/* Color principal personalizado */
+/* Ejemplo: cambia el color principal de Bootstrap por el tuyo
 :root {
   --bs-primary: #0d6efd;
   --bs-primary-rgb: 13, 110, 253;
 }
+*/
 
 /* Desplazamiento suave al pulsar los enlaces del menú */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 /* Que el título de cada sección no quede tapado por la navbar fija */
-section {
-  scroll-margin-top: 70px;
-}
-
-/* Transición suave para las cards de proyectos */
-.card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
+section { scroll-margin-top: 70px; }
