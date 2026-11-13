@@ -79,6 +79,11 @@ Es el trabajo principal de la asignatura. Se trata de un portfolio profesional m
 2. Abrir la carpeta en **Visual Studio Code**.
 3. Clic derecho en el archivo `index.html` (o dentro de `bootstrap-intro/ej09-portfolio/index.html`) y seleccionar **Open with Live Server**.
 
+## Uso De La IA
+
+He usado la IA para el css el readme y en forma de apoyo a lo largo del proyecto
+
+
 ---
 
 **Autor:** Joaquín Gutiérrez  
