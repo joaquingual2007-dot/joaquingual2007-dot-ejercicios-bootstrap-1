@@ -3,65 +3,309 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tu Nombre · Desarrollador/a web</title>
-  <meta name="description" content="Portfolio de Tu Nombre, desarrollador/a web junior. Proyectos, habilidades y contacto.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%BB%3C/text%3E%3C/svg%3E">
-
-  <!-- Bootstrap 5.3.8 + Bootstrap Icons (CDN) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <!-- Tus estilos propios (marca personal) SIEMPRE después de Bootstrap -->
-  <link rel="stylesheet" href="css/estilos.css">
+  <meta name="description" content="Portfolio profesional de Alejandro Ganoza, desarrollador web junior especializado en HTML, CSS, JavaScript y Bootstrap.">
+  <title>Álejandro Ganoza – Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/estilos.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Álejandro Ganoza</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home"><i class="bi bi-house-door"></i> Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi"><i class="bi bi-person"></i> Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades"><i class="bi bi-tools"></i> Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos"><i class="bi bi-card-list"></i> Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#formacion"><i class="bi bi-journal-bookmark"></i> Formación</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto"><i class="bi bi-envelope"></i> Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <!-- ============================================================
-       EJERCICIO 9 · MI PORTFOLIO PROFESIONAL
-       Lee ENUNCIADO.md. Rellena cada sección en su hueco.
-       ============================================================ -->
+  <!-- Hero / Portada -->
+  <section id="home" class="bg-body-tertiary py-5 text-center">
+    <div class="container">
+      <img src="https://picsum.photos/seed/portrait/200/200" class="rounded-circle mb-3" alt="Foto profesional de Alejandro Ganoza" width="200" height="200">
+      <h1 class="display-4">Álejandro Ganoza</h1>
+      <p class="lead">Desarrollador web junior · DAW</p>
+      <p>Apasionado por crear experiencias web responsivas, accesibles y con buen diseño.</p>
+      <a href="#proyectos" class="btn btn-primary btn-lg m-2">Ver proyectos</a>
+      <a href="docs/CV.pdf" class="btn btn-outline-light btn-lg m-2" download>Descargar CV</a>
+    </div>
+  </section>
 
-  <!-- ===== NAVBAR =====
-       Tu nombre/logo + enlaces: Sobre mí (#sobre-mi) · Habilidades (#habilidades)
-       · Proyectos (#proyectos) · Formación (#formacion) · Contacto (#contacto) -->
+  <!-- Habilidades -->
+  <section id="habilidades" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Habilidades</h2>
+      <div class="row justify-content-center">
+        <div class="col-6 col-md-3 text-center mb-3">
+          <i class="bi bi-filetype-html display-4 text-primary"></i>
+          <p>HTML5</p>
+        </div>
+        <div class="col-6 col-md-3 text-center mb-3">
+          <i class="bi bi-filetype-css display-4 text-info"></i>
+          <p>CSS3</p>
+        </div>
+        <div class="col-6 col-md-3 text-center mb-3">
+          <i class="bi bi-filetype-js display-4 text-warning"></i>
+          <p>JavaScript</p>
+        </div>
+        <div class="col-6 col-md-3 text-center mb-3">
+          <i class="bi bi-bootstrap-fill display-4 text-purple"></i>
+          <p>Bootstrap 5</p>
+        </div>
+        <div class="col-6 col-md-3 text-center mb-3">
+          <i class="bi bi-git display-4 text-danger"></i>
+          <p>Git & GitHub</p>
+        </div>
+        <div class="col-6 col-md-3 text-center mb-3">
+          <i class="bi bi-language-python display-4 text-success"></i>
+          <p>Python (backend)</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Proyectos -->
+  <section id="proyectos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center">Proyectos</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Project Card 1 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/seed/proj1/600/350" class="card-img-top" alt="Captura del proyecto 1">
+            <div class="card-body">
+              <h5 class="card-title">Portfolio estático</h5>
+              <p class="card-text">Sitio personal creado con Bootstrap 5 y HTML5, demostrando buenas prácticas de accesibilidad y responsive design.</p>
+              <span class="badge bg-primary me-1">HTML</span>
+              <span class="badge bg-success me-1">CSS</span>
+              <span class="badge bg-info me-1">Bootstrap</span>
+            </div>
+            <div class="card-footer bg-transparent border-0 d-flex justify-content-between">
+              <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalProj1">Detalle</a>
+              <a href="https://github.com/agl0073/bootstrap-intro-alumnos-1" class="btn btn-sm btn-outline-secondary" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/seed/proj2/600/350" class="card-img-top" alt="Captura del proyecto 2">
+            <div class="card-body">
+              <h5 class="card-title">Aplicación Todo List</h5>
+              <p class="card-text">SPA simple usando JavaScript puro y Bootstrap para gestión de tareas.</p>
+              <span class="badge bg-primary me-1">HTML</span>
+              <span class="badge bg-success me-1">CSS</span>
+              <span class="badge bg-warning me-1">JS</span>
+            </div>
+            <div class="card-footer bg-transparent border-0 d-flex justify-content-between">
+              <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalProj2">Detalle</a>
+              <a href="https://github.com/agl0073/todo-list" class="btn btn-sm btn-outline-secondary" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 3 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/seed/proj3/600/350" class="card-img-top" alt="Captura del proyecto 3">
+            <div class="card-body">
+              <h5 class="card-title">Codelab Academia</h5>
+              <p class="card-text">Landing page con catálogo de cursos, precios y formulario de contacto.</p>
+              <span class="badge bg-primary me-1">HTML</span>
+              <span class="badge bg-success me-1">Bootstrap</span>
+            </div>
+            <div class="card-footer bg-transparent border-0 d-flex justify-content-between">
+              <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalProj3">Detalle</a>
+              <a href="https://github.com/agl0073/bootstrap-intro-alumnos-1" class="btn btn-sm btn-outline-secondary" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <main>
+  <!-- Modal for Project Details (example with three modals) -->
+  <div class="modal fade" id="modalProj1" tabindex="-1" aria-labelledby="modalProj1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProj1Label">Portfolio estático</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Este proyecto muestra mi portfolio personal usando Bootstrap 5, con estructura semántica, accesibilidad y componentes avanzados como modal, navbar sticky y formulario de contacto.</p>
+          <ul>
+            <li>HTML5, CSS3, Bootstrap 5</li>
+            <li>Responsive design (mobile, tablet, desktop)</li>
+            <li>Validado con el W3C validator</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/agl0073/bootstrap-intro-alumnos-1" class="btn btn-primary" target="_blank">Ver repositorio</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- ===== PORTADA · SOBRE MÍ (id="sobre-mi") =====
-         Foto o avatar (img/foto.jpg), nombre, titular profesional, 2-3 líneas sobre ti,
-         botones "Ver proyectos" y "Descargar CV" (docs/cv.pdf con atributo download) -->
+  <div class="modal fade" id="modalProj2" tabindex="-1" aria-labelledby="modalProj2Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProj2Label">Aplicación Todo List</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>SPA sencilla que permite crear, marcar como completadas y eliminar tareas. Usa JavaScript puro y almacena datos en localStorage.</p>
+          <ul>
+            <li>HTML5, CSS3, JavaScript ES6+</li>
+            <li>Bootstrap 5 para UI</li>
+            <li>Persistencia con localStorage</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/agl0073/todo-list" class="btn btn-primary" target="_blank">Ver repositorio</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="modal fade" id="modalProj3" tabindex="-1" aria-labelledby="modalProj3Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProj3Label">Codelab Academia</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Landing page de una academia ficticia con navbar, hero, catálogo de cursos, precios y formulario de contacto con validación.</p>
+          <ul>
+            <li>Bootstrap 5 components (navbar, cards, accordion, modal)</li>
+            <li>Form validation con Bootstrap</li>
+            <li>Responsive grid system</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/agl0073/bootstrap-intro-alumnos-1" class="btn btn-primary" target="_blank">Ver repositorio</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- ===== HABILIDADES (id="habilidades") =====
-         Grupos: Front-end · Back-end · Bases de datos · Herramientas · Idiomas
-         Idea: una card por grupo con badges o iconos -->
+  <!-- Formación y experiencia (Accordion) -->
+  <section id="formacion" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Formación y experiencia</h2>
+      <div class="accordion" id="accordionFormacion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingDAW">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDAW" aria-expanded="true" aria-controls="collapseDAW">
+              CFGS Desarrollo de Aplicaciones Web (DAW)
+            </button>
+          </h2>
+          <div id="collapseDAW" class="accordion-collapse collapse show" aria-labelledby="headingDAW" data-bs-parent="#accordionFormacion">
+            <div class="accordion-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Programación front-end (HTML, CSS, JavaScript, Bootstrap)</li>
+                <li class="list-group-item">Programación back-end (PHP, MySQL, Node.js)</li>
+                <li class="list-group-item">Proyectos colaborativos y uso de Git/GitHub</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingPracticas">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePracticas" aria-expanded="false" aria-controls="collapsePracticas">
+              Prácticas en FFEOE
+            </button>
+          </h2>
+          <div id="collapsePracticas" class="accordion-collapse collapse" aria-labelledby="headingPracticas" data-bs-parent="#accordionFormacion">
+            <div class="accordion-body">
+              <p>Desarrollo de proyectos reales para clientes internos, integración de APIs y optimización de rendimiento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Contacto -->
+  <section id="contacto" class="py-5 bg-body-tertiary">
+    <div class="container">
+      <h2 class="mb-4 text-center">Contacto</h2>
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required>
+          <div class="invalid-feedback">Por favor, introduce tu nombre.</div>
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" required>
+          <div class="invalid-feedback">Introduce un email válido.</div>
+        </div>
+        <div class="col-12">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+          <div class="invalid-feedback">Escribe un mensaje.</div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="terminos" required>
+            <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+            <div class="invalid-feedback">Debes aceptar antes de enviar.</div>
+          </div>
+        </div>
+        <div class="col-12 text-center">
+          <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </section>
 
-    <!-- ===== PROYECTOS (id="proyectos") =====
-         Mínimo 3 cards: captura (img/), descripción, badges de tecnologías,
-         botones "Demo" y "Código" (GitHub). Idea JS: modal con el detalle -->
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+      <p class="mb-1">© 2026 Álejandro Ganoza</p>
+      <a href="https://github.com/agl0073" class="text-light me-3" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="https://linkedin.com/in/alejandro-ganoza" class="text-light me-3" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="mailto:alejandro@example.com" class="text-light" aria-label="Correo"><i class="bi bi-envelope"></i></a>
+    </div>
+  </footer>
 
-
-    <!-- ===== FORMACIÓN Y EXPERIENCIA (id="formacion") =====
-         CFGS DAW, prácticas (FFEOE), cursos, certificaciones.
-         Idea: list-group o accordion -->
-
-
-    <!-- ===== CONTACTO (id="contacto") =====
-         Formulario con validación (nombre, email, asunto, mensaje)
-         + enlaces a email, LinkedIn y GitHub -->
-
-  </main>
-
-  <!-- ===== FOOTER =====
-       © año + tu nombre · iconos de redes (con aria-label) · "Última actualización: ..." -->
-
-
-  <!-- Botón para volver al índice del proyecto de clase (bórralo al publicar tu portfolio) -->
-  <a href="../index.html" class="btn btn-sm btn-secondary position-fixed bottom-0 end-0 m-3 z-3">← Índice</a>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Tu JavaScript (validación del formulario, modo oscuro...) -->
-  <script src="js/main.js"></script>
+  <!-- Bootstrap Bundle JS (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+  <!-- Form validation script -->
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        })
+      })
+    })()
+  </script>
 </body>
 </html>
