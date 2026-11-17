@@ -120,8 +120,8 @@ section {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  color: var(--bs-body-color);
-  background-color: rgba(var(--bs-primary-rgb), 0.08);
+  color: #0a58ca;
+  background-color: rgba(10, 88, 202, 0.1);
   text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -148,4 +148,65 @@ section {
 .footer-social-link:hover {
   background-color: var(--bs-primary);
   color: #ffffff;
+}
+
+/* ============================================================
+   6. CORRECCIONES DE CONTRASTE ACCESIBLE (WCAG 2.1 AA / AAA)
+   Garantiza 0 contrast errors en la herramienta WAVE
+   ============================================================ */
+
+/* Textos secundarios con ratio > 7.5:1 sobre fondo claro */
+.text-body-secondary,
+.text-secondary {
+  color: #495057 !important; /* Justificado: corrección de contraste para cumplir WCAG AA sobre fondos claros */
+}
+
+/* Iconos y textos semánticos con contraste accesible > 5:1 sobre fondo claro */
+.text-success {
+  color: #146c43 !important; /* Justificado: contraste 6.45:1 sobre blanco */
+}
+
+.text-danger {
+  color: #b02a37 !important; /* Justificado: contraste 6.50:1 sobre blanco */
+}
+
+.text-warning {
+  color: #856404 !important; /* Justificado: contraste 5.49:1 sobre blanco */
+}
+
+.text-info {
+  color: #055160 !important; /* Justificado: contraste 8.93:1 sobre blanco */
+}
+
+/* Insignias con contraste de color garantizado */
+.badge.text-bg-success {
+  background-color: #146c43 !important; /* Justificado: contraste 6.45:1 con texto blanco */
+  color: #ffffff !important;
+}
+
+.badge.text-bg-danger {
+  background-color: #b02a37 !important; /* Justificado: contraste 6.50:1 con texto blanco */
+  color: #ffffff !important;
+}
+
+.badge.text-bg-secondary {
+  background-color: #495057 !important; /* Justificado: contraste 8.18:1 con texto blanco */
+  color: #ffffff !important;
+}
+
+/* Botones outline-secondary accesibles */
+.btn-outline-secondary {
+  color: #212529 !important; /* Justificado: contraste 15.2:1 sobre fondo claro */
+  border-color: #495057 !important;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #212529 !important;
+  border-color: #212529 !important;
+  color: #ffffff !important;
+}
+
+/* Texto de fecha del footer con contraste alto sobre fondo oscuro */
+.footer-updated {
+  color: #dee2e6 !important; /* Justificado: contraste 11.85:1 sobre #212529 */
 }
