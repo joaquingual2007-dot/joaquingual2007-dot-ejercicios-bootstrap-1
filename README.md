@@ -83,7 +83,7 @@ Se ha definido una paleta limitada de colores corporativos con contrastes verifi
 - **0 errores · 0 advertencias**
 - Documento HTML5 totalmente válido según especificación.
 
-![Validador HTML W3C](docs/evidencias/validador-html.png)
+![Validador HTML W3C](docs/evidencias/html.png)
 
 ---
 
@@ -91,15 +91,26 @@ Se ha definido una paleta limitada de colores corporativos con contrastes verifi
 - **0 errores en `css/estilos.css`**
 - Uso exclusivo de propiedades estándar y variables CSS válidas.
 
-![Validador CSS W3C](docs/evidencias/validador-css.png)
+![Validador CSS W3C](docs/evidencias/css.png)
 
 ---
 
-### 5. Modo Responsive (DevTools)
+### 5. WebAIM Contrast Checker
+- Verificación de contraste en combinaciones de texto y fondo según estándar WCAG 2.1 AA.
+
+![WebAIM Contrast Checker](docs/evidencias/webaim.png)
+
+---
+
+### 6. Modo Responsive (DevTools)
 Verificado en las resoluciones requeridas sin scroll horizontal:
 - **Móvil (375 px)**: visualización vertical limpia, navbar colapsable en menú hamburguesa y tarjetas en una columna.
 - **Tablet (768 px)**: rejilla fluida a 2 columnas en habilidades y proyectos.
 - **Escritorio (1200 px+)**: maquetación a 3 columnas, navbar desplegada y contenido equilibrado.
+
+![Responsive Móvil 375px](docs/evidencias/movil.png)
+![Responsive Tablet 768px](docs/evidencias/tablet.png)
+![Responsive Escritorio 1200px](docs/evidencias/ordenador.png)
 
 ---
 

@@ -34,8 +34,8 @@ Se ha definido una paleta limitada de colores corporativos con contrastes verifi
 | Color / Rol | Código HEX | Combinación de fondo | Ratio de contraste | Cumplimiento WCAG 2.1 |
 |---|---|---|:---:|:---:|
 | **Primario corporativo** | `#0a58ca` | Blanco (`#ffffff`) | **6.48:1** | ✅ Supera AA (mín. 4.5:1) |
-| **Primario modo oscuro** | `#6ea8fe` | Gris oscuro (`#212529`) | **8.25:1** | ✅ Supera AA y AAA |
-| **Acento secundario** | `#146c43` | Blanco (`#ffffff`) | **6.01:1** | ✅ Supera AA |
+| **Primario modo oscuro** | `#9ec5fe` | Gris oscuro (`#212529`) | **7.71:1** | ✅ Supera AA y AAA |
+| **Acento secundario** | `#146c43` | Blanco (`#ffffff`) | **6.45:1** | ✅ Supera AA |
 | **Texto principal** | `#212529` | Blanco (`#ffffff`) | **16.10:1** | ✅ Supera AAA |
 | **Neutro claro** | `#f8f9fa` | Fondo alterno de secciones | — | Neutro |
 
@@ -83,7 +83,7 @@ Se ha definido una paleta limitada de colores corporativos con contrastes verifi
 - **0 errores · 0 advertencias**
 - Documento HTML5 totalmente válido según especificación.
 
-![Validador HTML W3C](docs/evidencias/validador-html.png)
+![Validador HTML W3C](docs/evidencias/html.png)
 
 ---
 
@@ -91,15 +91,26 @@ Se ha definido una paleta limitada de colores corporativos con contrastes verifi
 - **0 errores en `css/estilos.css`**
 - Uso exclusivo de propiedades estándar y variables CSS válidas.
 
-![Validador CSS W3C](docs/evidencias/validador-css.png)
+![Validador CSS W3C](docs/evidencias/css.png)
 
 ---
 
-### 5. Modo Responsive (DevTools)
+### 5. WebAIM Contrast Checker
+- Verificación de contraste en combinaciones de texto y fondo según estándar WCAG 2.1 AA.
+
+![WebAIM Contrast Checker](docs/evidencias/webaim.png)
+
+---
+
+### 6. Modo Responsive (DevTools)
 Verificado en las resoluciones requeridas sin scroll horizontal:
 - **Móvil (375 px)**: visualización vertical limpia, navbar colapsable en menú hamburguesa y tarjetas en una columna.
 - **Tablet (768 px)**: rejilla fluida a 2 columnas en habilidades y proyectos.
 - **Escritorio (1200 px+)**: maquetación a 3 columnas, navbar desplegada y contenido equilibrado.
+
+![Responsive Móvil 375px](docs/evidencias/movil.png)
+![Responsive Tablet 768px](docs/evidencias/tablet.png)
+![Responsive Escritorio 1200px](docs/evidencias/ordenador.png)
 
 ---
 
@@ -109,8 +120,12 @@ En cumplimiento con los criterios de transparencia académica:
 - Se ha utilizado Inteligencia Artificial como herramienta de apoyo pedagógico para la revisión de sintaxis, la comprobación matemática de los ratios de contraste de color bajo la normativa WCAG 2.1 AA y la optimización de buenas prácticas.
 - La estructura del código, la selección de contenidos, la maquetación en Bootstrap 5.3 y la comprensión de cada componente han sido desarrolladas y validadas personalmente por el alumno.
 
+## Uso De La IA
+
+He usado la IA para el css el readme y en forma de apoyo a lo largo del proyecto
+
 ---
 
-**Autor:** Joaquín Gutiérrez  
+**Autor:** Joaquín Gutiérrez Almagro  
 **Curso:** 2.º DAW — Instituto Oficial de Formación Profesional MEDAC Sevilla Este  
 **Módulo:** Diseño de Interfaces Web (UD7)
