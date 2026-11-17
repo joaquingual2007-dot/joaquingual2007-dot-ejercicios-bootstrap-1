@@ -18,12 +18,12 @@
 }
 
 [data-bs-theme="dark"] {
-  /* Color primario en modo oscuro con contraste accesible (> 8:1 sobre gris oscuro) */
-  --bs-primary: #6ea8fe;
-  --bs-primary-rgb: 110, 168, 254;
-  --bs-link-color: #6ea8fe;
-  --bs-link-hover-color: #9ec5fe;
-  --bs-focus-ring-color: rgba(110, 168, 254, 0.35);
+  /* Color primario en modo oscuro con contraste accesible (> 7.5:1 sobre fondo oscuro) */
+  --bs-primary: #9ec5fe;
+  --bs-primary-rgb: 158, 197, 254;
+  --bs-link-color: #9ec5fe;
+  --bs-link-hover-color: #cfe2ff;
+  --bs-focus-ring-color: rgba(158, 197, 254, 0.35);
   --portfolio-accent: #75b798;
 }
 
@@ -110,8 +110,56 @@ section {
 }
 
 /* ============================================================
-   5. BOTONES SOCIALES Y FOOTER
+   5. BOTONES SOCIALES, BOTONES ADAPTABLES Y FOOTER
    ============================================================ */
+/* Botón outline adaptable con contraste superior a 12:1 en modo claro y modo oscuro */
+.btn-outline-theme {
+  color: #212529;
+  border-color: #495057;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-theme:hover {
+  color: #ffffff;
+  background-color: #212529;
+  border-color: #212529;
+}
+
+[data-bs-theme="dark"] .btn-outline-theme {
+  color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+[data-bs-theme="dark"] .btn-outline-theme:hover {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+/* Botón outline-primary con alto contraste verificado en ambos modos */
+.btn-outline-primary {
+  color: #0a58ca;
+  border-color: #0a58ca;
+}
+
+.btn-outline-primary:hover {
+  color: #ffffff;
+  background-color: #0a58ca;
+  border-color: #0a58ca;
+}
+
+[data-bs-theme="dark"] .btn-outline-primary {
+  color: #9ec5fe;
+  border-color: #9ec5fe;
+}
+
+[data-bs-theme="dark"] .btn-outline-primary:hover {
+  color: #000000;
+  background-color: #9ec5fe;
+  border-color: #9ec5fe;
+}
+
 /* Enlaces sociales en la sección de contacto */
 .social-link {
   display: inline-flex;
@@ -124,6 +172,11 @@ section {
   background-color: rgba(10, 88, 202, 0.1);
   text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+[data-bs-theme="dark"] .social-link {
+  color: #9ec5fe;
+  background-color: rgba(158, 197, 254, 0.15);
 }
 
 .social-link:hover {
@@ -152,58 +205,88 @@ section {
 
 /* ============================================================
    6. CORRECCIONES DE CONTRASTE ACCESIBLE (WCAG 2.1 AA / AAA)
-   Garantiza 0 contrast errors en la herramienta WAVE
+   Garantiza 0 Contrast Errors en WAVE tanto en modo claro como oscuro
    ============================================================ */
 
-/* Textos secundarios con ratio > 7.5:1 sobre fondo claro */
+/* Textos secundarios con ratio > 7.5:1 en modo claro y > 10:1 en modo oscuro */
 .text-body-secondary,
 .text-secondary {
   color: #495057 !important; /* Justificado: corrección de contraste para cumplir WCAG AA sobre fondos claros */
 }
 
-/* Iconos y textos semánticos con contraste accesible > 5:1 sobre fondo claro */
+[data-bs-theme="dark"] .text-body-secondary,
+[data-bs-theme="dark"] .text-secondary {
+  color: #dee2e6 !important; /* Justificado: corrección de contraste en modo oscuro */
+}
+
+/* Iconos y textos semánticos con contraste accesible > 5.5:1 sobre fondo claro */
 .text-success {
   color: #146c43 !important; /* Justificado: contraste 6.45:1 sobre blanco */
+}
+
+[data-bs-theme="dark"] .text-success {
+  color: #75b798 !important; /* Justificado: contraste 6.8:1 sobre fondo oscuro */
 }
 
 .text-danger {
   color: #b02a37 !important; /* Justificado: contraste 6.50:1 sobre blanco */
 }
 
+[data-bs-theme="dark"] .text-danger {
+  color: #ea868f !important; /* Justificado: contraste 6.1:1 sobre fondo oscuro */
+}
+
 .text-warning {
   color: #856404 !important; /* Justificado: contraste 5.49:1 sobre blanco */
+}
+
+[data-bs-theme="dark"] .text-warning {
+  color: #ffda6a !important; /* Justificado: contraste 8.3:1 sobre fondo oscuro */
 }
 
 .text-info {
   color: #055160 !important; /* Justificado: contraste 8.93:1 sobre blanco */
 }
 
-/* Insignias con contraste de color garantizado */
-.badge.text-bg-success {
-  background-color: #146c43 !important; /* Justificado: contraste 6.45:1 con texto blanco */
+[data-bs-theme="dark"] .text-info {
+  color: #6edff6 !important; /* Justificado: contraste 8.5:1 sobre fondo oscuro */
+}
+
+/* Insignias con contraste de color garantizado en ambos modos */
+.badge.text-bg-primary,
+[data-bs-theme="dark"] .badge.text-bg-primary {
+  background-color: #0a58ca !important; /* Justificado: contraste 6.44:1 con texto blanco en ambos temas */
   color: #ffffff !important;
 }
 
-.badge.text-bg-danger {
-  background-color: #b02a37 !important; /* Justificado: contraste 6.50:1 con texto blanco */
+.badge.text-bg-success,
+[data-bs-theme="dark"] .badge.text-bg-success {
+  background-color: #146c43 !important; /* Justificado: contraste 6.45:1 con texto blanco en ambos temas */
   color: #ffffff !important;
 }
 
-.badge.text-bg-secondary {
-  background-color: #495057 !important; /* Justificado: contraste 8.18:1 con texto blanco */
+.badge.text-bg-danger,
+[data-bs-theme="dark"] .badge.text-bg-danger {
+  background-color: #b02a37 !important; /* Justificado: contraste 6.50:1 con texto blanco en ambos temas */
   color: #ffffff !important;
 }
 
-/* Botones outline-secondary accesibles */
-.btn-outline-secondary {
-  color: #212529 !important; /* Justificado: contraste 15.2:1 sobre fondo claro */
-  border-color: #495057 !important;
+.badge.text-bg-secondary,
+[data-bs-theme="dark"] .badge.text-bg-secondary {
+  background-color: #495057 !important; /* Justificado: contraste 8.18:1 con texto blanco en ambos temas */
+  color: #ffffff !important;
 }
 
-.btn-outline-secondary:hover {
-  background-color: #212529 !important;
-  border-color: #212529 !important;
-  color: #ffffff !important;
+.badge.text-bg-warning,
+[data-bs-theme="dark"] .badge.text-bg-warning {
+  background-color: #ffc107 !important; /* Justificado: contraste 9.46:1 con texto oscuro */
+  color: #212529 !important;
+}
+
+.badge.text-bg-info,
+[data-bs-theme="dark"] .badge.text-bg-info {
+  background-color: #0dcaf0 !important; /* Justificado: contraste 7.88:1 con texto oscuro */
+  color: #212529 !important;
 }
 
 /* Texto de fecha del footer con contraste alto sobre fondo oscuro */
